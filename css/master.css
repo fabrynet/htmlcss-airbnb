@@ -9,16 +9,32 @@
 .block {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background-size: cover;
   background-position: center;
   border: 10px solid #fff;
 }
 .layover {
+  /* display: none; */
+  transition: 0.5s;
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.3);
+}
+/* .block:hover .layover {
+  display: block;
+} */
+.block:hover .layover {
+  transition: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+}
+.block:hover .sub-title {
+  transition: 2s;
+  opacity: 1;
+
 }
 #roma {
   background-image: url("../img/Roma.jpg");
@@ -47,6 +63,9 @@
   transform: translate(-50%,-50%);
 }
 .sub-title {
+  /* display: none; */
+  transition: 2s;
+  opacity: 0;
   font-size: 2em;
   color: white;
   text-shadow: 2px 2px 4px black;
